@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{xcolor} % Required for custom colors
+\usepackage{sectsty} % Required for section font customization
+\usepackage{geometry} % Required for custom page layout
+\usepackage{tikz} % Required for drawing shapes and backgrounds
+\usepackage{everypage} % To apply the green border only on the first page
+\usepackage{graphicx}
+
+% Define custom colors
+\definecolor{darkgray}{RGB}{50,50,50}
+\definecolor{green}{RGB}{122, 184, 81}
+\definecolor{white}{RGB}{255,255,255}
+
+% Custom page layout
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\pagecolor{darkgray} % Set background color
+\color{white} % Set text color
+
+% Custom section font
+\sectionfont{\color{green}\normalfont\bfseries\Large}
+
+% Add a green border on the first page
+\AddEverypageHook{
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[green, line width=1.5cm] (current page.south west) rectangle (current page.north east);
+    \end{tikzpicture}
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \vspace*{\fill} % Vertically center content
+    \begin{center}
+        \textbf{\huge {Buissness Name}} \\ % Business name at the top
+        \vspace{0.5cm}
+        \large Location/University \\
+        \vspace{2cm}
+        \textbf{\Huge \textcolor{green}{BUSINESS} \textcolor{white}{PROPOSAL}} \\
+        \vspace{2cm}
+        % Team members section
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{flushleft}
+                Member 1 \\
+                Position/ID \\
+                member1@gmail.com
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{center}
+                Member 2 \\
+                Position/ID \\
+                member2@gmail.com
+            \end{center}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{flushright}
+                Member 3 \\
+                Position/ID \\
+                member3@gmail.com
+            \end{flushright}
+        \end{minipage}
+        
+        \vspace{1cm} % Adjust vertical spacing between rows
+        
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{flushleft}
+                Member 4 \\
+                Position/ID \\
+                member4@gmail.com
+            \end{flushleft}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{flushright}
+                Member 5 \\
+                Position/ID \\
+                member5@gmail.com
+            \end{flushright}
+        \end{minipage}
+    \end{center}
+    \vspace*{\fill} % Vertically center content
+\end{titlepage}
+
+
+\newpage
+\clearpage
+\vspace*{\fill}
+\begin{center}
+    \tableofcontents
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+
+\section{Introduction and Rationale}
+
+\vspace{0.3cm}
+
+INTRODUCTION 
+
+\vspace{0.3cm}
+
+RATIONAL
+
+\section{Proposed Solutions }
+
+
+\newpage
+
+\section{Workflow \& Budget Allocation}
+
+
+\section{Budget Breakdown}
+
+\subsection*{Total Budget}
+
+\section{Business Model}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{subscription_model.png}
+    \caption{Subscription Model}
+    \label{fig:subscription_model}
+\end{figure}
+
+
+\section{Conclusion}
+
+\section{[Final Message]}
+
+
+\begin{center}
+\Large{Slogan to invite}
+\end{center}
+
+
+\end{document}
